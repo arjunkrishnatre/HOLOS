@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Database (optional)
+backend/lifeos.db
