@@ -1,0 +1,471 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+body {
+  background: #050505;
+  color: white;
+}
+
+.dashboard {
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  padding: 35px 25px 110px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.top {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 35px;
+}
+
+.top h1 {
+  color: #aa3bff;
+  font-size: 38px;
+  letter-spacing: 5px;
+}
+
+.top p {
+  color: #bbbbbb;
+  margin-top: 8px;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #aa3bff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   AI SECTION
+========================= */
+
+.ai-section {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  margin: 0 auto 45px;
+}
+
+
+/* =========================
+   AI CORE RING
+========================= */
+
+.core-ring {
+  position: relative !important;
+
+  width: 170px !important;
+  height: 170px !important;
+
+  min-width: 170px !important;
+  min-height: 170px !important;
+
+  margin: 0 auto !important;
+
+  border-radius: 50%;
+
+  border: 6px solid #aa3bff;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-direction: row !important;
+
+  animation: pulse 2.5s infinite;
+
+  box-shadow:
+    0 0 25px rgba(170, 59, 255, 0.35),
+    0 0 45px rgba(170, 59, 255, 0.45);
+
+  z-index: 1;
+
+  overflow: visible;
+}
+
+
+/* =========================
+   AI CORE DOT
+========================= */
+
+.core-dot {
+  position: static !important;
+
+  width: 38px !important;
+  height: 38px !important;
+
+  min-width: 38px !important;
+  min-height: 38px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50%;
+
+  background: #aa3bff;
+
+  box-shadow:
+    0 0 25px #aa3bff;
+
+  flex-shrink: 0;
+
+  display: block !important;
+
+  transform: none !important;
+}
+
+
+/* =========================
+   AI TEXT
+========================= */
+
+.ai-section h2 {
+  margin-top: 25px;
+
+  font-size: 30px;
+
+  color: #aa3bff;
+}
+
+.ai-section p {
+  margin-top: 10px;
+
+  color: #999;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+  margin-bottom: 20px;
+
+  color: white;
+}
+
+
+/* =========================
+   ROOM CARDS
+========================= */
+
+.rooms {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin-bottom: 40px;
+}
+
+.room-card {
+  background: #111111;
+
+  padding: 25px;
+
+  border-radius: 22px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  border: 2px solid transparent;
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #aa3bff;
+
+  box-shadow:
+    0 0 20px rgba(170, 59, 255, 0.4);
+}
+
+.room-card h2 {
+  font-size: 20px;
+
+  margin-bottom: 12px;
+}
+
+.room-card p {
+  color: #999;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.online {
+  color: #55ff88;
+}
+
+.offline {
+  color: #ff6666;
+}
+
+
+/* =========================
+   AI SUGGESTIONS
+========================= */
+
+.suggestions {
+  background: #111111;
+
+  border-radius: 25px;
+
+  padding: 25px;
+}
+
+.suggestions h3 {
+  margin-bottom: 18px;
+}
+
+.suggestion {
+  background: #1a1a1a;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  margin-bottom: 12px;
+
+  transition: 0.3s;
+}
+
+.suggestion:hover {
+  background: #aa3bff;
+}
+
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.bottom-nav {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  background: #111111;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  padding: 18px 0;
+
+  border-top: 2px solid #222;
+
+  z-index: 1000;
+}
+
+.bottom-nav div {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  color: #777;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.bottom-nav .active {
+  color: #aa3bff;
+}
+
+.bottom-nav span {
+  margin-top: 5px;
+}
+
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+body[data-theme="light"] {
+  background: #f4f4f4;
+  color: #111;
+}
+
+body[data-theme="light"] .dashboard {
+  background: #f4f4f4;
+  color: #111;
+}
+
+body[data-theme="light"] .top p {
+  color: #666;
+}
+
+body[data-theme="light"] .section-title {
+  color: #111;
+}
+
+body[data-theme="light"] .room-card {
+  background: #ffffff;
+
+  border-color: #e2e2e2;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+body[data-theme="light"] .room-card p {
+  color: #666;
+}
+
+body[data-theme="light"] .suggestions {
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+body[data-theme="light"] .suggestion {
+  background: #f1f1f1;
+}
+
+body[data-theme="light"] .bottom-nav {
+  background: #ffffff;
+
+  border-top-color: #ddd;
+
+  box-shadow:
+    0 -3px 15px rgba(0, 0, 0, 0.06);
+}
+
+body[data-theme="light"] .bottom-nav div {
+  color: #777;
+}
+
+
+/* =========================
+   AI CORE ANIMATION
+========================= */
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 20px rgba(170, 59, 255, 0.35);
+  }
+
+  50% {
+    transform: scale(1.05);
+
+    box-shadow:
+      0 0 55px rgba(170, 59, 255, 0.7);
+  }
+
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 20px rgba(170, 59, 255, 0.35);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .dashboard {
+    padding: 25px 15px 110px;
+  }
+
+  .top h1 {
+    font-size: 30px;
+  }
+
+  .profile {
+    width: 48px;
+    height: 48px;
+  }
+
+  .core-ring {
+    width: 135px !important;
+    height: 135px !important;
+
+    min-width: 135px !important;
+    min-height: 135px !important;
+  }
+
+  .core-dot {
+    width: 30px !important;
+    height: 30px !important;
+
+    min-width: 30px !important;
+    min-height: 30px !important;
+  }
+
+  .ai-section h2 {
+    font-size: 25px;
+  }
+
+  .rooms {
+    grid-template-columns: 1fr;
+  }
+
+}

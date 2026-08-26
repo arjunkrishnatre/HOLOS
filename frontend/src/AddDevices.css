@@ -1,0 +1,258 @@
+.add-devices-page {
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  padding: 35px 25px 70px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.devices-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 45px;
+}
+
+.devices-header h1 {
+  color: #aa3bff;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+.devices-header p {
+  color: #888;
+  margin-top: 7px;
+}
+
+.devices-back {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 14px;
+  background: #111;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.devices-back:hover {
+  background: #aa3bff;
+}
+
+
+/* INTRO */
+
+.devices-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.devices-core {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #aa3bff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  box-shadow:
+    0 0 30px rgba(170, 59, 255, 0.35);
+}
+
+.devices-core div {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #aa3bff;
+
+  box-shadow:
+    0 0 20px #aa3bff;
+}
+
+.devices-intro h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.devices-intro p {
+  color: #888;
+}
+
+
+/* ECOSYSTEMS */
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.ecosystem-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 20px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.ecosystem-card:hover {
+  transform: translateY(-3px);
+  border-color: #aa3bff;
+
+  box-shadow:
+    0 0 20px rgba(170, 59, 255, 0.2);
+}
+
+.ecosystem-card.selected {
+  border-color: #aa3bff;
+  background: #18101f;
+
+  box-shadow:
+    0 0 25px rgba(170, 59, 255, 0.25);
+}
+
+
+/* ICON */
+
+.ecosystem-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 15px;
+
+  background: #1c1c1c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+
+/* INFO */
+
+.ecosystem-info {
+  flex: 1;
+}
+
+.ecosystem-info h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.ecosystem-info p {
+  color: #888;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+/* ARROW */
+
+.ecosystem-arrow {
+  color: #aa3bff;
+  font-size: 24px;
+}
+
+
+/* CONNECTION PANEL */
+
+.connection-panel {
+  margin-top: 25px;
+
+  background: #111;
+
+  border: 1px solid #aa3bff;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  text-align: center;
+}
+
+.connection-panel h2 {
+  color: #aa3bff;
+  margin-bottom: 8px;
+}
+
+.connection-panel p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.connection-panel button {
+  border: none;
+  border-radius: 12px;
+
+  padding: 13px 25px;
+
+  background: #aa3bff;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* LIGHT MODE */
+
+body[data-theme="light"] .add-devices-page {
+  background: #f4f4f4;
+  color: #111;
+}
+
+body[data-theme="light"] .ecosystem-card {
+  background: white;
+  border-color: #ddd;
+}
+
+body[data-theme="light"] .ecosystem-card.selected {
+  background: #f7efff;
+}
+
+body[data-theme="light"] .ecosystem-icon {
+  background: #f1f1f1;
+}
+
+body[data-theme="light"] .connection-panel {
+  background: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .add-devices-page {
+    padding: 25px 15px;
+  }
+
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

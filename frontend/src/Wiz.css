@@ -1,0 +1,526 @@
+.wiz-page {
+  min-height: 100vh;
+  padding: 28px 42px 60px;
+  box-sizing: border-box;
+
+  background: var(--bg, #080808);
+  color: var(--text, #ffffff);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.wiz-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  max-width: 1100px;
+  margin: 0 auto 35px;
+}
+
+
+.wiz-back {
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+
+  font-size: 27px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.wiz-back:hover {
+  transform: translateX(-3px);
+  background: rgba(255,255,255,0.14);
+}
+
+
+.wiz-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex: 1;
+}
+
+
+.wiz-bulb-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.08);
+
+  font-size: 28px;
+}
+
+
+.wiz-title h1 {
+  margin: 0;
+
+  font-size: 27px;
+}
+
+
+.wiz-title p {
+  margin: 4px 0 0;
+
+  opacity: 0.55;
+}
+
+
+.wiz-status {
+  padding: 9px 15px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+}
+
+
+.wiz-status.online {
+  background: rgba(60, 220, 130, 0.12);
+  color: #50e890;
+}
+
+
+.wiz-status.offline {
+  background: rgba(255, 80, 80, 0.12);
+  color: #ff6969;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.wiz-content {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   DEVICE CARD
+========================= */
+
+.wiz-device-card {
+  grid-row: span 2;
+
+  min-height: 500px;
+
+  border-radius: 28px;
+
+  padding: 45px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: rgba(255,255,255,0.055);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-sizing: border-box;
+}
+
+
+.wiz-big-bulb {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 70px;
+
+  background: rgba(255,255,255,0.05);
+
+  margin-bottom: 30px;
+
+  transition:
+    box-shadow 0.4s,
+    transform 0.3s;
+}
+
+
+.wiz-big-bulb.on {
+  transform: scale(1.04);
+}
+
+
+.wiz-device-card h2 {
+  margin: 0;
+
+  font-size: 26px;
+}
+
+
+.wiz-device-card p {
+  opacity: 0.55;
+}
+
+
+/* =========================
+   POWER
+========================= */
+
+.wiz-power {
+  margin-top: 18px;
+
+  padding: 13px 35px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: rgba(255,255,255,0.06);
+
+  color: inherit;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+
+.wiz-power.active {
+  background: rgba(80, 230, 140, 0.16);
+  color: #5bea91;
+}
+
+
+.wiz-power:hover {
+  transform: scale(1.03);
+}
+
+
+/* =========================
+   CONTROL CARDS
+========================= */
+
+.wiz-control-card {
+  padding: 25px;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.055);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-sizing: border-box;
+}
+
+
+.wiz-control-card h3 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+
+.control-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.control-heading span {
+  opacity: 0.65;
+}
+
+
+/* =========================
+   BRIGHTNESS
+========================= */
+
+.brightness-slider {
+  width: 100%;
+
+  margin-top: 25px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   COLOR
+========================= */
+
+.color-selector {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 20px;
+}
+
+
+.color-selector input {
+  width: 60px;
+  height: 60px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.color-preview {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 12px currentColor;
+}
+
+
+.control-description {
+  opacity: 0.55;
+
+  margin-top: 7px;
+}
+
+
+/* =========================
+   MOODS
+========================= */
+
+.mood-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+
+.mood-grid button {
+  min-height: 82px;
+
+  border-radius: 17px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.05);
+
+  color: inherit;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  font-size: 24px;
+
+  transition: 0.2s;
+}
+
+
+.mood-grid button span {
+  font-size: 12px;
+
+  opacity: 0.7;
+}
+
+
+.mood-grid button:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255,255,255,0.10);
+}
+
+
+/* =========================
+   DEVICE INFORMATION
+========================= */
+
+.wiz-info-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+
+.wiz-info-row:last-child {
+  border-bottom: none;
+}
+
+
+.wiz-info-row span {
+  opacity: 0.55;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.wiz-message {
+  grid-column: 1 / -1;
+
+  padding: 15px 20px;
+
+  border-radius: 16px;
+
+  background: rgba(70,220,130,0.10);
+
+  color: #63e99a;
+
+  text-align: center;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.wiz-loading {
+  min-height: 80vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.wiz-loader {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: 4px solid rgba(255,255,255,0.1);
+
+  border-top-color: #ffffff;
+
+  animation: wiz-spin 0.8s linear infinite;
+
+  margin-bottom: 20px;
+}
+
+
+@keyframes wiz-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body[data-theme="light"] .wiz-page {
+  --bg: #f4f5f7;
+  --text: #151515;
+}
+
+
+body[data-theme="light"] .wiz-device-card,
+body[data-theme="light"] .wiz-control-card {
+  background: rgba(255,255,255,0.85);
+
+  border-color: rgba(0,0,0,0.08);
+}
+
+
+body[data-theme="light"] .wiz-back,
+body[data-theme="light"] .wiz-bulb-icon,
+body[data-theme="light"] .wiz-power,
+body[data-theme="light"] .mood-grid button {
+  background: rgba(0,0,0,0.05);
+
+  border-color: rgba(0,0,0,0.08);
+}
+
+
+body[data-theme="light"] .wiz-info-row {
+  border-color: rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .wiz-page {
+    padding: 20px;
+  }
+
+  .wiz-content {
+    grid-template-columns: 1fr;
+  }
+
+  .wiz-device-card {
+    grid-row: auto;
+
+    min-height: 420px;
+  }
+
+  .wiz-status {
+    display: none;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}

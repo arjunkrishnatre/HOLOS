@@ -2,16 +2,25 @@
 __pycache__/
 *.py[cod]
 
-# macOS
-.DS_Store
-
-# PyCharm
-.idea/
-
-# Virtual environments
+# Python virtual environments
 venv/
 .venv/
 env/
 
-# Database (optional)
+# Environment / secrets
+.env
+*.env
+
+# Node / React
+node_modules/
+dist/
+
+# macOS
+.DS_Store
+._.DS_Store
+
+# PyCharm
+.idea/
+
+# Database
 backend/lifeos.db

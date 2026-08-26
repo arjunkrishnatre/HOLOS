@@ -1,0 +1,315 @@
+.wiz-pairing-page {
+
+  min-height: 100vh;
+
+  background: #050505;
+
+  color: white;
+
+  padding: 30px;
+
+}
+
+
+/* HEADER */
+
+.wiz-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+.wiz-header h1 {
+
+  font-size: 30px;
+
+  margin: 0;
+
+}
+
+.wiz-back {
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 34px;
+
+  cursor: pointer;
+
+}
+
+
+/* SEARCH */
+
+.wiz-search {
+
+  text-align: center;
+
+  margin-top: 60px;
+
+}
+
+.wiz-search h2 {
+
+  font-size: 28px;
+
+  margin-bottom: 50px;
+
+}
+
+
+/* ANIMATED RING */
+
+.wiz-ring {
+
+  width: 230px;
+
+  height: 230px;
+
+  border-radius: 50%;
+
+  border: 5px solid #22223b;
+
+  border-top-color: #66c7ff;
+
+  margin: auto;
+
+  animation: wiz-spin 1.8s linear infinite;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.wiz-ring-dot {
+
+  width: 18px;
+
+  height: 18px;
+
+  background: #66c7ff;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 25px #66c7ff;
+
+}
+
+.wiz-search h3 {
+
+  margin-top: 30px;
+
+  font-size: 25px;
+
+  letter-spacing: 5px;
+
+}
+
+
+/* FOUND DEVICES */
+
+.wiz-devices {
+
+  max-width: 700px;
+
+  margin: auto;
+
+}
+
+.wiz-device {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: #111;
+
+  border: 1px solid #292929;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  margin-top: 15px;
+
+  text-align: left;
+
+}
+
+.wiz-device strong {
+
+  font-size: 20px;
+
+}
+
+.wiz-device p {
+
+  color: #888;
+
+  margin-top: 5px;
+
+}
+
+.wiz-device button {
+
+  background: #aa3bff;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 13px 18px;
+
+  cursor: pointer;
+
+}
+
+
+/* EMPTY */
+
+.wiz-empty {
+
+  max-width: 500px;
+
+  margin: auto;
+
+}
+
+.wiz-static-ring {
+
+  width: 150px;
+
+  height: 150px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  border: 4px solid #292940;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 45px;
+
+}
+
+.wiz-empty p {
+
+  color: #888;
+
+  margin-top: 15px;
+
+  line-height: 1.5;
+
+}
+
+
+/* ERROR */
+
+.wiz-error {
+
+  max-width: 600px;
+
+  margin: 30px auto;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: #2a1010;
+
+  color: #ff7777;
+
+  text-align: center;
+
+}
+
+
+/* HELP */
+
+.wiz-help {
+
+  position: fixed;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  background: #303141;
+
+  padding: 25px;
+
+  text-align: center;
+
+}
+
+.wiz-help h2 {
+
+  margin-bottom: 18px;
+
+}
+
+.wiz-help-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+}
+
+.wiz-help button {
+
+  background: #00aeea;
+
+  border: none;
+
+  color: white;
+
+  padding: 15px 30px;
+
+  border-radius: 30px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+
+@keyframes wiz-spin {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}

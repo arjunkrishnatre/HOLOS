@@ -1,0 +1,134 @@
+/* General Page */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: white;
+}
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Bar */
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+}
+
+.top-bar h2 {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Main Content */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========================= */
+/* HOLOS LOGO */
+/* ========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.logo span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+}
+
+.core-link {
+  text-decoration: none;
+}
+
+/* Glowing O */
+
+.core {
+  width: 55px;
+  height: 55px;
+  border: 3px solid #AA3BFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s infinite;
+}
+
+.core-dot {
+  width: 16px;
+  height: 16px;
+  background: #AA3BFF;
+  border-radius: 50%;
+  box-shadow: 0 0 18px #AA3BFF;
+}
+
+/* Text */
+
+main h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+main p {
+  text-align: center;
+  line-height: 1.8;
+  color: #d0d0d0;
+  margin-bottom: 40px;
+}
+
+/* Button */
+
+button {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 30px;
+  background: #AA3BFF;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #9227F5;
+  transform: scale(1.05);
+}
+
+/* Animation */
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #AA3BFF;
+  }
+
+  50% {
+    box-shadow: 0 0 35px #AA3BFF;
+  }
+
+  100% {
+    box-shadow: 0 0 10px #AA3BFF;
+  }
+}

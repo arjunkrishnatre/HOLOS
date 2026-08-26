@@ -1,0 +1,54 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="10" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <radialGradient id="core">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="45%" stop-color="#AA3BFF"/>
+    <stop offset="100%" stop-color="#AA3BFF"/>
+  </radialGradient>
+</defs>
+
+
+<!-- Background -->
+
+<rect
+ width="512"
+ height="512"
+ rx="120"
+ fill="#050505"
+/>
+
+
+<!-- Smaller HOLOS O -->
+
+<circle
+ cx="256"
+ cy="256"
+ r="125"
+ fill="none"
+ stroke="#AA3BFF"
+ stroke-width="32"
+ filter="url(#glow)"
+/>
+
+
+<!-- Center AI dot -->
+
+<circle
+ cx="256"
+ cy="256"
+ r="28"
+ fill="url(#core)"
+ filter="url(#glow)"
+/>
+
+
+</svg>

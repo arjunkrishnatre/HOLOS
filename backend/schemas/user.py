@@ -1,18 +1,57 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
+from typing import Optional
 
 
-class UserBase(BaseModel):
-    name: str
-    assistant: str
-    goal: str
-    status: str
+# ---------- Signup ----------
 
-class UserCreate(UserBase):
-    pass
+class UserCreate(BaseModel):
+
+    full_name: str
+
+    email: EmailStr
+
+    password: str
+
+    date_of_birth: str
+
+    gender: str
 
 
-class UserResponse(UserBase):
-    id:int
+# ---------- Login ----------
+
+class UserLogin(BaseModel):
+
+    email: EmailStr
+
+    password: str
+
+
+# ---------- Verify Email ----------
+
+class VerifyUser(BaseModel):
+
+    email: EmailStr
+
+    verification_code: str
+
+
+# ---------- Response ----------
+
+class UserResponse(BaseModel):
+
+    id: int
+
+    full_name: str
+
+    email: EmailStr
+
+    is_verified: bool
+
+    assistant: Optional[str] = "HOLOS"
+
+    goal: Optional[str] = "Build a personal AI operating system"
+
+    status: Optional[str] = "Active"
 
     class Config:
         from_attributes = True

@@ -1,0 +1,84 @@
+.core-page {
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.big-core {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #aa3bff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s infinite;
+  margin-bottom: 30px;
+}
+
+.big-core-dot {
+  width: 30px;
+  height: 30px;
+  background: #aa3bff;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #aa3bff;
+}
+
+.core-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
+
+.core-page p {
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #dddddd;
+  margin-bottom: 20px;
+}
+
+.connection {
+  margin: 35px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #aa3bff;
+  line-height: 1.8;
+}
+
+.core-page button {
+  margin-top: 20px;
+  padding: 12px 35px;
+  background: #aa3bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.core-page button:hover {
+  background: #9227f5;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #aa3bff;
+  }
+
+  50% {
+    box-shadow: 0 0 35px #aa3bff;
+  }
+
+  100% {
+    box-shadow: 0 0 10px #aa3bff;
+  }
+}

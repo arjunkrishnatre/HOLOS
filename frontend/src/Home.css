@@ -1,0 +1,541 @@
+/* =========================
+   HOLOS HOME PAGE
+========================= */
+
+
+.home-page {
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(
+        circle at bottom,
+        #182b55,
+        #050505 60%
+    );
+
+    color:white;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+
+/* =========================
+   ABOUT US TOP RIGHT
+========================= */
+
+
+.navbar {
+
+    position:absolute;
+
+    top:35px;
+
+    right:45px;
+
+}
+
+
+.navbar a {
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+
+.navbar a:hover {
+
+    color:#b56cff;
+
+}
+
+
+
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* =========================
+   HOLOS LOGO
+========================= */
+
+
+.holos-title {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    font-size:90px;
+
+    font-weight:700;
+
+    letter-spacing:18px;
+
+}
+
+
+
+
+
+/* =========================
+   CORE O (NO BOX + PULSING)
+========================= */
+
+
+.core-svg-link {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    border:0;
+
+    outline:0;
+
+    background:none;
+
+    padding:0;
+
+    margin:0;
+
+    line-height:0;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+
+.core-svg-link:hover {
+
+    transform:scale(1.08);
+
+}
+
+
+
+.core-svg-link:focus,
+.core-svg-link:focus-visible,
+.core-svg-link:active {
+
+    outline:none !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+
+}
+
+
+
+.holos-core-svg {
+
+    width:90px;
+
+    height:90px;
+
+    display:block;
+
+    overflow:visible;
+
+    outline:none;
+
+    border:none;
+
+    animation:coreGlow 2s infinite ease-in-out;
+
+    transform-origin:center;
+
+}
+
+
+
+/* Whole O-Core pulse */
+
+@keyframes coreGlow {
+
+
+    0% {
+
+        transform:scale(1);
+
+        filter:
+        drop-shadow(0 0 15px #b56cff)
+        drop-shadow(0 0 40px #7a00ff);
+
+    }
+
+
+    50% {
+
+        transform:scale(1.08);
+
+        filter:
+        drop-shadow(0 0 30px #b56cff)
+        drop-shadow(0 0 70px #7a00ff);
+
+    }
+
+
+    100% {
+
+        transform:scale(1);
+
+        filter:
+        drop-shadow(0 0 15px #b56cff)
+        drop-shadow(0 0 40px #7a00ff);
+
+    }
+
+}
+
+
+
+/* Purple O Ring */
+
+.core-ring {
+
+    fill:none;
+
+    stroke:#b56cff;
+
+    stroke-width:8;
+
+}
+
+
+
+/* Center AI Core Dot */
+
+.core-center {
+
+    fill:white;
+
+    filter:
+    drop-shadow(0 0 10px white)
+    drop-shadow(0 0 30px #b56cff);
+
+    animation:dotPulse 1.5s infinite ease-in-out;
+
+    transform-box:fill-box;
+
+    transform-origin:center;
+
+}
+
+
+
+@keyframes dotPulse {
+
+
+    0% {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+
+    50% {
+
+        transform:scale(1.4);
+
+        opacity:0.65;
+
+    }
+
+
+    100% {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+.core-svg-link:hover {
+
+    transform:scale(1.08);
+
+}
+
+
+
+.core-svg-link:focus,
+.core-svg-link:focus-visible,
+.core-svg-link:active {
+
+    outline:none !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+
+}
+
+
+
+.holos-core-svg {
+
+    width:90px;
+
+    height:90px;
+
+    display:block;
+
+    overflow:visible;
+
+    outline:none;
+
+    border:none;
+
+}
+
+
+
+.holos-core-svg:focus {
+
+    outline:none;
+
+}
+
+
+
+/* Purple O Ring */
+
+
+.core-ring {
+
+    fill:none;
+
+    stroke:#b56cff;
+
+    stroke-width:8;
+
+    filter:
+    drop-shadow(0 0 15px #b56cff)
+    drop-shadow(0 0 40px #7a00ff);
+
+}
+
+
+
+/* Core Dot */
+
+
+.core-center {
+
+    fill:white;
+
+    filter:
+    drop-shadow(0 0 10px white)
+    drop-shadow(0 0 30px #b56cff);
+
+    animation:corePulse 1.6s infinite ease-in-out;
+
+}
+
+
+
+@keyframes corePulse {
+
+
+    0% {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+
+    50% {
+
+        transform:scale(1.35);
+
+        opacity:0.7;
+
+    }
+
+
+    100% {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+.core-center {
+
+    fill:white;
+
+    filter:
+
+    drop-shadow(0 0 10px white)
+
+    drop-shadow(0 0 30px #b56cff);
+
+
+    animation:pulse 1.5s infinite;
+
+}
+
+
+
+
+
+@keyframes pulse {
+
+
+    50% {
+
+        transform:scale(1.5);
+
+        opacity:0.6;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   TAGLINE
+========================= */
+
+
+.tagline {
+
+    margin-top:25px;
+
+    font-size:25px;
+
+    color:white;
+
+}
+
+
+
+
+
+.action-lines p {
+
+    margin:10px;
+
+    font-size:18px;
+
+    color:#dddddd;
+
+}
+
+
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+
+.start-button {
+
+    margin-top:35px;
+
+    padding:15px 55px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#d59cff;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 0 20px #b56cff;
+
+
+    transition:0.3s;
+
+}
+
+
+
+.start-button:hover {
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+    0 0 40px #b56cff;
+
+}
